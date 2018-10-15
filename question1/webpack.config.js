@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
     entry: './index.js',
     output: {
@@ -19,19 +18,34 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[hash].css"
+            filename: "[contenthash].css",
+            chunkFilename: "[id].css"
         })
     ],
     module: {
         rules: [{
-            test: [/\.scss$/,/\.css$/],
+            test: /\.scss$/,
             use: [
-                MiniCssExtractPlugin.loader,
-                "css-loader"
+                {
+                    loader: MiniCssExtractPlugin.loader
+                },
+                {
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                }
             ]
         }]
     },
     resolve: {
-        extensions: ["js", ".jsx", "*"]
-    }
+        extensions: ["js", ".jsx", ".scss", "*"]
+    },
+    devtool: 'source-map'
 }

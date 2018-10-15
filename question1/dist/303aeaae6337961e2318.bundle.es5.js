@@ -93,8 +93,10 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./index.js?");
+let body = document.getElementsByTagName("body")
+console.log(body)
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=303aeaae6337961e2318.bundle.es5.js.map
