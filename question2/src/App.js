@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Images from './images';
+import PhotoGallery from './images';
 let images = ["iamge1"]
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Images images={images} type="default"/>
+        <PhotoGallery images={images} type="default"/>
       </div>
     );
   }
