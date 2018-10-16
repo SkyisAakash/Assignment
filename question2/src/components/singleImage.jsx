@@ -7,12 +7,14 @@ const SingleImage = (props) => {
         <CSSTransition
             in={true}
             timeout={2500}
-            className='fade'
-            appear={true}>
-        <img src={url} key={index} />
-        <p>{caption}</p>
-        {center ? <p>I am centered</p> : null}
-        </CSSTransition>
+            appear={true}
+            classNames='fade'>
+        <div key='photo' className={'photo-container'}>
+            <img src={url} key={index} />
+            <p>{caption}</p>
+            {center ? <p>I am centered</p> : null}
+        </div>
+        </CSSTransition>    
     )
 }
 

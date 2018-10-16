@@ -36,6 +36,7 @@ class PhotoGallery extends React.Component{
     render() {
         let { index } = this.state;
         const { images } = this.props;
+        if(images===undefined)return null;
         return(
             <div className='carousel' tabIndex='0'>
                 <ul className='carousel-wrap'>
@@ -50,17 +51,17 @@ class PhotoGallery extends React.Component{
                     ) : (<li className='empty'></li>)}
                     <li className='center-li'>
                         <SingleImage index={index}
-                            url={images[index - 1].url}
+                            url={images[index].url}
                             center={false}
-                            caption={images[index - 1].caption}
+                            caption={images[index].caption}
                         />
                     </li>
                     {images[index + 1] ? (
                         <li className='left-li' onClick={this.moveRight}>
                             <SingleImage index={index}
-                                url={images[index - 1].url}
+                                url={images[index + 1].url}
                                 center={false}
-                                caption={images[index - 1].caption}
+                                caption={images[index + 1].caption}
                             />
                         </li>
                     ) : (<li className='empty'></li>)}
