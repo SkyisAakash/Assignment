@@ -5,8 +5,17 @@
     position: relative;
 }
 
+.addBackground {
+    background-color: white;
+}
+
 .image {
     width: 100%;
+    color: black;
+    font-weight: 900;
+    font-size: 100px;
+    text-shadow: 0px 0px 20px white;
+    background-color: white;
 }
 
 /* CSS transition effects */
@@ -20,26 +29,7 @@
   opacity: 1;
 }
 
-/* enter */
-/* .fade-enter {
-  opacity: 0;
-} 
-.fade-enter.fade-enter-active {
-    transition: opacity 2000ms linear;
-    opacity: 1;
-}  */
-
-/* exit */
-/* .fade-exit {
-    opacity: 1;
-}
-.fade-exit.fade-exit-active {
-    transition: opacity 5000ms linear;
-    opacity: 0;
-}
-.fade-exit-done {
-  opacity: 0;
-}  */
+/* more styles for other classes */
 
 .caption {
     position: absolute;
@@ -67,6 +57,7 @@
     opacity: 1;
     text-shadow: 0px 0px 20px black;
     transition: 1s ease;
+    font-size: 50px;
 }
 
 .leftArrow {

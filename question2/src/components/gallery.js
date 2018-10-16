@@ -43,6 +43,7 @@ class PhotoGallery extends React.Component{
         let prevImageIdx = this.previousIndex(index)
         let nextImageIdx = this.nextIndex(index)
         if(images===undefined)return null;
+        if(images.length===0)return <h1>No images today :(</h1>
         return(
             <div className='carousel' tabIndex='0'>
                 <ul className='carousel-wrap'>
