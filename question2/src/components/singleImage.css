@@ -1,0 +1,46 @@
+.photo-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    box-shadow: 1px 1px 10px white;
+}
+
+/* CSS transition effects */
+
+.fade-appear {
+    opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  transition: opacity 2000ms linear;
+  opacity: 1;
+}
+
+/* enter */
+.fade-enter {
+  opacity: 0;
+} 
+.fade-enter.fade-enter-active {
+    transition: opacity 2000ms linear 2000ms;
+    opacity: 1;
+} 
+
+/* exit */
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    transition: opacity 5000ms linear;
+    opacity: 0;
+}
+.fade-exit-done {
+  opacity: 0;
+} 
