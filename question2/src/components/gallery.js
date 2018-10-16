@@ -50,7 +50,7 @@ class PhotoGallery extends React.Component{
                         <li className='left-li' onClick={this.moveLeft}>
                             <SingleImage index={index}
                             url={images[prevImageIdx].url}
-                            center={false}
+                            location="left"
                             caption={images[prevImageIdx].caption}
                             />
                         </li>
@@ -58,7 +58,7 @@ class PhotoGallery extends React.Component{
                     <li className='center-li'>
                         <SingleImage index={index}
                             url={images[index].url}
-                            center={true}
+                            location="center"
                             caption={images[index].caption}
                         />
                     </li>
@@ -66,7 +66,7 @@ class PhotoGallery extends React.Component{
                         <li className='right-li' onClick={this.moveRight}>
                             <SingleImage index={index}
                                 url={images[nextImageIdx].url}
-                                center={false}
+                                location="right"
                                 caption={images[nextImageIdx].caption}
                             />
                         </li>

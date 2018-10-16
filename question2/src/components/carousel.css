@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 70vh;
+    height: 90vh;
 }
 
 .carousel li {
@@ -43,17 +43,20 @@
 
 .right-li, .left-li {
     transform: scale(1);
-    transition-duration: 0.7s;
-    transition: 1s ease-in;
+    transition-duration: 0.5s;
+    transition: 0.5s ease-in;
     opacity: 0.6;
     box-shadow: none;
 }
 
+
 .left-li:hover {
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .right-li:hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 
