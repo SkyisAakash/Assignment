@@ -41,7 +41,7 @@ class PhotoGallery extends React.Component{
             <div className='carousel' tabIndex='0'>
                 <ul className='carousel-wrap'>
                     { images[index-1] ? (
-                        <li className='right-li' onClick={this.moveLeft}>
+                        <li className='left-li' onClick={this.moveLeft}>
                             <SingleImage index={index}
                             url={images[index-1].url}
                             center={false}
@@ -52,12 +52,12 @@ class PhotoGallery extends React.Component{
                     <li className='center-li'>
                         <SingleImage index={index}
                             url={images[index].url}
-                            center={false}
+                            center={true}
                             caption={images[index].caption}
                         />
                     </li>
                     {images[index + 1] ? (
-                        <li className='left-li' onClick={this.moveRight}>
+                        <li className='right-li' onClick={this.moveRight}>
                             <SingleImage index={index}
                                 url={images[index + 1].url}
                                 center={false}

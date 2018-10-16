@@ -11,8 +11,7 @@ const SingleImage = (props) => {
             classNames='fade'>
         <div key='photo' className={'photo-container'}>
             <img src={url} key={index} className={'image'} />
-            <p>{caption}</p>
-            {center ? <p>I am centered</p> : null}
+                {center ? <p className='caption'>{caption}</p> : null}
         </div>
         </CSSTransition>    
     )

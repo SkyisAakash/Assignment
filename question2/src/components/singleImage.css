@@ -10,7 +10,7 @@
 
 .image {
     width: 100%;
-    box-shadow: 1px 1px 10px white;
+    /* box-shadow: 1px 1px 10px white; */
 }
 
 /* CSS transition effects */
@@ -20,21 +20,21 @@
 }
 
 .fade-appear.fade-appear-active {
-  transition: opacity 2000ms linear;
+  transition: opacity 1000ms linear;
   opacity: 1;
 }
 
 /* enter */
-.fade-enter {
+/* .fade-enter {
   opacity: 0;
 } 
 .fade-enter.fade-enter-active {
     transition: opacity 2000ms linear;
     opacity: 1;
-} 
+}  */
 
 /* exit */
-.fade-exit {
+/* .fade-exit {
     opacity: 1;
 }
 .fade-exit.fade-exit-active {
@@ -43,4 +43,16 @@
 }
 .fade-exit-done {
   opacity: 0;
-} 
+}  */
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    margin-bottom: 0px;
+}

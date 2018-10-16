@@ -9,7 +9,12 @@
     overflow-x: hidden;
 }
 
+.carousel-wrap li {
+  transition: 1s ease-in;
+}
+
 .carousel {
+    margin-top: 2%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -18,27 +23,40 @@
 }
 
 .carousel li {
-    width: 100%;
-    z-index: 0;
-    box-shadow: 10px 10px 10px black;
-    border-radius: 5px;
+    height: 85%;
+    width: 80%;
 }
 
 .center-li {
-    height: 85%;
+    position: absolute;
+    margin: 0;
+    box-shadow: 0px 0px 10px black;
+    transition: 1s ease-in;
     transform: scale(1);
-    -webkit-transform: scale(1);
-    -o-transform: scale(1);
     transition-duration: 0.7s;
-    -webkit-transition-duration: 0.7s;
-    -o-transition-duration: 0.7s;
+    opacity: 1;
 }
 
+.carousel-wrap:focus {outline: 0}
+
 .right-li, .left-li {
-    width: 15%;
-    height: 22%;
-    margin: 20px;
+    transform: scale(1);
+    transition-duration: 0.7s;
+    transition: 1s ease-in;
     opacity: 0.6;
+    box-shadow: none;
+}
+
+.left-li {
+    margin-left: -75%;
+}
+
+.right-li {
+    margin-right: -75%;
+}
+
+.carousel-wrap:focus {
+    outline: 0;
 }
 
 li {
@@ -46,9 +64,7 @@ li {
 }
 
 .empty {
-    width: 100%;
     border: none;
-    background: white;
     box-shadow: white;
 }
 
