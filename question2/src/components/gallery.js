@@ -14,38 +14,44 @@ class PhotoGallery extends React.Component{
     }
 
     moveLeft() {
+        let newState = this.previousIndex(this.state.index)
         this.setState({
-            index: this.state.index - 1
+            index: newState
         })
     }
 
     moveRight() {
+        let newState = this.nextIndex(this.state.index)
         this.setState({
-            index: this.state.index + 1
+            index: newState
         })
     }
 
-    UNSAFE_componentWillReceiveProps(newProps) {
-        if (newProps.images.length - 1 < this.state.index) {
-            this.setState({
-                index: 0
-            })
-        }
+    previousIndex(index) {
+        let nextIndex = (index - 1 < 0) ? this.props.images.length - 1 : index - 1
+        return nextIndex
+    }
+
+    nextIndex(index) {
+        let nextIndex = (index + 1 === this.props.images.length) ? 0 : index + 1
+        return nextIndex
     }
 
     render() {
         let { index } = this.state;
         const { images } = this.props;
+        let prevImageIdx = this.previousIndex(index)
+        let nextImageIdx = this.nextIndex(index)
         if(images===undefined)return null;
         return(
             <div className='carousel' tabIndex='0'>
                 <ul className='carousel-wrap'>
-                    { images[index-1] ? (
+                    { images[prevImageIdx] ? (
                         <li className='left-li' onClick={this.moveLeft}>
                             <SingleImage index={index}
-                            url={images[index-1].url}
+                            url={images[prevImageIdx].url}
                             center={false}
-                            caption={images[index-1].caption}
+                            caption={images[prevImageIdx].caption}
                             />
                         </li>
                     ) : (<li className='empty'></li>)}
@@ -56,12 +62,12 @@ class PhotoGallery extends React.Component{
                             caption={images[index].caption}
                         />
                     </li>
-                    {images[index + 1] ? (
+                    {images[nextImageIdx] ? (
                         <li className='right-li' onClick={this.moveRight}>
                             <SingleImage index={index}
-                                url={images[index + 1].url}
+                                url={images[nextImageIdx].url}
                                 center={false}
-                                caption={images[index + 1].caption}
+                                caption={images[nextImageIdx].caption}
                             />
                         </li>
                     ) : (<li className='empty'></li>)}

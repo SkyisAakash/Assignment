@@ -25,16 +25,16 @@
 }
 
 /* enter */
-/* .fade-enter {
+.fade-enter {
   opacity: 0;
 } 
 .fade-enter.fade-enter-active {
     transition: opacity 2000ms linear;
     opacity: 1;
-}  */
+} 
 
 /* exit */
-/* .fade-exit {
+.fade-exit {
     opacity: 1;
 }
 .fade-exit.fade-exit-active {
@@ -43,7 +43,7 @@
 }
 .fade-exit-done {
   opacity: 0;
-}  */
+} 
 
 .caption {
     position: absolute;
