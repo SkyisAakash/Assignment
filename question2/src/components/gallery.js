@@ -1,4 +1,5 @@
 import React from 'react';
+import SingleImage from './singleImage';
 
 
 class PhotoGallery extends React.Component{
@@ -38,17 +39,29 @@ class PhotoGallery extends React.Component{
         return(
             <div className='carousel' tabIndex='0'>
                 <ul className='carousel-wrap'>
-                    { images[idx-1] ? (
+                    { images[index-1] ? (
                         <li className='right-li' onClick={this.moveLeft}>
-                            {/* image-1 */}
+                            <SingleImage index={index}
+                            url={images[index-1].url}
+                            center={false}
+                            caption={images[index-1].caption}
+                            />
                         </li>
                     ) : (<li className='empty'></li>)}
                     <li className='center-li'>
-                        {/* image0 */}
+                        <SingleImage index={index}
+                            url={images[index - 1].url}
+                            center={false}
+                            caption={images[index - 1].caption}
+                        />
                     </li>
-                    {images[idx + 1] ? (
+                    {images[index + 1] ? (
                         <li className='left-li' onClick={this.moveRight}>
-                            {/* image1 */}
+                            <SingleImage index={index}
+                                url={images[index - 1].url}
+                                center={false}
+                                caption={images[index - 1].caption}
+                            />
                         </li>
                     ) : (<li className='empty'></li>)}
                 </ul>
