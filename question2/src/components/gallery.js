@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleImage from './singleImage';
-
+import './carousel.css';
 
 class PhotoGallery extends React.Component{
 

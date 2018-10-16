@@ -1,0 +1,58 @@
+.carousel-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: white;
+    flex-shrink: 0;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.carousel li {
+    width: 100%;
+    z-index: 0;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 5px;
+}
+
+.center-li {
+    height: 85%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+}
+
+.right-li, .left-li {
+    width: 15%;
+    height: 22%;
+    margin: 20px;
+    opacity: 0.6;
+}
+
+li {
+    list-style: none;
+}
+
+.empty {
+    width: 100%;
+    border: none;
+    background: white;
+    box-shadow: white;
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}

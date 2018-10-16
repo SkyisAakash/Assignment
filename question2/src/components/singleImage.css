@@ -29,7 +29,7 @@
   opacity: 0;
 } 
 .fade-enter.fade-enter-active {
-    transition: opacity 2000ms linear 2000ms;
+    transition: opacity 2000ms linear;
     opacity: 1;
 } 
 
